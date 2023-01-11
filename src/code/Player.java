@@ -1,29 +1,30 @@
 package code;
 
 import java.awt.Image;
+
 import javax.swing.ImageIcon;
 
 public class Player extends Actor {
 
-    public Player(int x, int y) {
-        super(x, y);
+	public Player(int x, int y) {
+		super(x, y);
 
-        initPlayer();
-    }
+		initPlayer();
+	}
 
-    private void initPlayer() {
+	private void initPlayer() {
 
-        ImageIcon iicon = new ImageIcon("src/resources/sokoban.png");
-        Image image = iicon.getImage();
-        setImage(image);
-    }
+		ImageIcon iicon = new ImageIcon("src/resources/sokoban.png");
+		Image image = iicon.getImage();
+		setImage(image);
+	}
 
-    public void move(int x, int y) {
+	public void move(int x, int y) {
 
-        int dx = x() + x;
-        int dy = y() + y;
-        
-        setX(dx);
-        setY(dy);
-    }
+		int dx = x() + x;
+		int dy = y() + y;
+
+		setX(dx);
+		setY(dy);
+	}
 }

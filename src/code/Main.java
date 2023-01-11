@@ -1,19 +1,15 @@
 package code;
 
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextPane;
-import javax.swing.JButton;
-import javax.swing.JEditorPane;
-
+import java.awt.event.ActionEvent;
 //import javax.swing.JPanel;
 import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Graphics;
-import java.awt.Image;
+
+import javax.swing.JButton;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+import javax.swing.JTextPane;
+import javax.swing.border.EmptyBorder;
 
 public class Main extends JFrame {
 
@@ -45,25 +41,24 @@ public class Main extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Sokoban");
 		setContentPane(contentPane);
-		
+
 		JTextPane lblNom = new JTextPane();
 		lblNom.setEditable(false);
 		lblNom.setText("Entrez votre nom:");
 		contentPane.add(lblNom);
-		
+
 		JEditorPane txtNom = new JEditorPane();
 		contentPane.add(txtNom);
-		
+
 		JButton btnJouer = new JButton("Jouer");
 		btnJouer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					 // Création de la boite en mémoire
+				// Création de la boite en mémoire
 				Sokoban JouerFenetre = new Sokoban();
-	
-					 // Affichage de la boite
+
+				// Affichage de la boite
 				JouerFenetre.setVisible(true);
-				
-				
+
 			}
 		});
 		btnJouer.setBounds(180, 120, 70, 21);
@@ -71,8 +66,3 @@ public class Main extends JFrame {
 	}
 
 }
-
-
-
-
-

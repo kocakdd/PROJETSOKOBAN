@@ -1,37 +1,37 @@
 package code;
 
 import java.awt.EventQueue;
+
 import javax.swing.JFrame;
 
 public class Sokoban extends JFrame {
 
-    private final int OFFSET = 30;
+	private final int OFFSET = 30;
 
-    public Sokoban() {
+	public Sokoban() {
 
-        initUI();
-    }
+		initUI();
+	}
 
-    private void initUI() {
-        
-        Board board = new Board();
-        add(board);
+	private void initUI() {
 
-        setTitle("Sokoban");
-        
-        setSize(board.getBoardWidth() + OFFSET,
-                board.getBoardHeight() + 2 * OFFSET);
-        
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-    }
+		Board board = new Board();
+		add(board);
 
-    public static void main(String[] args) {
-        
-        EventQueue.invokeLater(() -> {
-            
-            Sokoban game = new Sokoban();
-            game.setVisible(true);
-        });
-    }
+		setTitle("Sokoban");
+
+		setSize(board.getBoardWidth() + OFFSET, board.getBoardHeight() + 2 * OFFSET);
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+	}
+
+	public static void main(String[] args) {
+
+		EventQueue.invokeLater(() -> {
+
+			Sokoban game = new Sokoban();
+			game.setVisible(true);
+		});
+	}
 }
